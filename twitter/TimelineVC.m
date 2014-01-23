@@ -7,7 +7,7 @@
 //
 
 #import "TimelineVC.h"
-
+#import "TweetCell.h"
 @interface TimelineVC ()
 
 @property (nonatomic, strong) NSMutableArray *tweets;
@@ -24,6 +24,8 @@
     self = [super initWithStyle:style];
     if (self) {
         self.title = @"Twitter";
+        UINib* tweetCellNib = [UINib nibWithNibName:@"TweetCell" bundle:nil];
+        [self.tableView registerNib:tweetCellNib forCellReuseIdentifier:@"TweetCell"];
         
         [self reload];
     }
@@ -58,17 +60,18 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.tweets.count;
+        return 5;
+//    return self.tweets.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    static NSString *CellIdentifier = @"TweetCell";
+    TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+// =   [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
 
-    Tweet *tweet = self.tweets[indexPath.row];
-    cell.textLabel.text = tweet.text;
+//    Tweet *tweet = self.tweets[indexPath.row];
+//    cell.textLabel.text = tweet.text;
     
     return cell;
 }
@@ -144,6 +147,10 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // Do nothing
     }];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 150;
 }
 
 @end
