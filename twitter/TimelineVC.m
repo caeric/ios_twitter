@@ -8,6 +8,7 @@
 
 #import "TimelineVC.h"
 #import "TweetCell.h"
+#import "AFNetworking.h"
 @interface TimelineVC ()
 
 @property (nonatomic, strong) NSMutableArray *tweets;
@@ -60,17 +61,21 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-        return 5;
-//    return self.tweets.count;
+    return self.tweets.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"TweetCell";
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    Tweet *tweet = self.tweets[indexPath.row];
+    cell.tweetText.text = tweet.text;
+    cell.userNameLabel.text = [tweet.tweetUser objectForKey:@"name"];
+    NSURL *url = [NSURL URLWithString:[tweet.tweetUser objectForKey:@"profile_image_url"]];
+    [cell.userImageView setImageWithURL:url];
 // =   [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
 
-//    Tweet *tweet = self.tweets[indexPath.row];
+//    Tweet *tweet =
 //    cell.textLabel.text = tweet.text;
     
     return cell;

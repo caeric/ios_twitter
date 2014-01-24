@@ -10,6 +10,15 @@
 
 @implementation Tweet
 
+
+- (id)initWithDictionary:(NSDictionary *)data {
+    if (self = [super initWithDictionary:data]) {
+        self.tweetUser = [[TweetUser alloc]initWithDictionary:[self.data objectForKey:@"user"]];
+    }
+    
+    return self;
+}
+
 - (NSString *)text {
     return [self.data valueOrNilForKeyPath:@"text"];
 }

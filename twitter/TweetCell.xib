@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eric" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pd8-es-bdH">
-                        <rect key="frame" x="92" y="37" width="30" height="21"/>
+                        <rect key="frame" x="92" y="37" width="75" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="highlightedColor"/>
@@ -50,8 +50,12 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" red="0.28596907910000002" green="1" blue="0.1888085799" alpha="1" colorSpace="calibratedRGB"/>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="tweetText" destination="0UZ-j3-3OM" id="Whm-E8-T9d"/>
+                <outlet property="userImageView" destination="aNM-8H-HcG" id="YWD-tb-e06"/>
+                <outlet property="userNameLabel" destination="Pd8-es-bdH" id="Tkj-49-6v0"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

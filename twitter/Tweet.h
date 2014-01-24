@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TweetUser.h"
 
 @interface Tweet : RestObject
 
 @property (nonatomic, strong, readonly) NSString *text;
+@property (nonatomic, strong) TweetUser *tweetUser;
 
 + (NSMutableArray *)tweetsWithArray:(NSArray *)array;
 
