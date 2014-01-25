@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ComposeTweetViewController : UIViewController
+@interface ComposeTweetViewController : UIViewController <UITextViewDelegate>
+- (IBAction)onCancelClicked:(id)sender;
+- (IBAction)onTweetClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *userTweetNameLabel;
+
+@property (weak, nonatomic) IBOutlet UITextView *tweetTextView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *userTweetImageView;
+@property (weak, nonatomic) IBOutlet UILabel *userTweetHandleLabel;
 
 @end
