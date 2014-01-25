@@ -38,6 +38,7 @@
     self.tweetTextView.delegate = self;
     NSURL *url = [NSURL URLWithString:[[User currentUser] objectForKey:@"profile_image_url"]];
     [self.userTweetImageView setImageWithURL:url];
+    self.tweetButton.enabled = NO;
     [self.tweetTextView becomeFirstResponder];
 }
 
@@ -66,6 +67,15 @@
         NSUInteger emptyIndex = TWEET_MAX_LENGTH - (textView.text.length - range.length);
         textView.text = [[[textView.text substringToIndex:range.location] stringByAppendingString:[text substringToIndex:emptyIndex]] stringByAppendingString:[textView.text substringFromIndex:(range.location + range.length)]];
         return NO;
+    }
+}
+
+- (void)textViewDidChange:(UITextView *)textView {
+    self.tweetCountLabel.text = [NSString stringWithFormat:@"%d", (140 - [textView.text length])];
+    if ([textView.text length] > 0) {
+        self.tweetButton.enabled = YES;
+    } else {
+        self.tweetButton.enabled = NO;
     }
 }
 

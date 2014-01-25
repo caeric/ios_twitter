@@ -7,10 +7,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComposeTweetViewController">
             <connections>
+                <outlet property="tweetButton" destination="hZ4-6G-aNP" id="fAi-14-qfC"/>
+                <outlet property="tweetCountLabel" destination="1Eh-Ir-hsB" id="l80-8j-KLh"/>
                 <outlet property="tweetTextView" destination="gsg-GA-v9x" id="mqm-pg-9Uf"/>
                 <outlet property="userTweetHandleLabel" destination="8eX-FH-Dbn" id="yAH-bi-tba"/>
                 <outlet property="userTweetImageView" destination="x0j-VU-34v" id="R2r-Q0-RnP"/>
-                <outlet property="userTweetNameLabel" destination="fFd-6m-2Is" id="DGg-Br-3No"/>
+                <outlet property="userTweetNameLabel" destination="fFd-6m-2Is" id="VTX-6m-L28"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>

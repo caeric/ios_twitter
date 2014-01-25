@@ -18,4 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *userTweetImageView;
 @property (weak, nonatomic) IBOutlet UILabel *userTweetHandleLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *tweetCountLabel;
+@property (weak, nonatomic) IBOutlet UIButton *tweetButton;
+
 @end
