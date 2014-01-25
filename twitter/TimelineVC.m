@@ -9,6 +9,7 @@
 #import "TimelineVC.h"
 #import "TweetCell.h"
 #import "AFNetworking.h"
+#import "ComposeTweetViewController.h"
 @interface TimelineVC ()
 
 @property (nonatomic, strong) NSMutableArray *tweets;
@@ -37,13 +38,19 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sign Out" style:UIBarButtonItemStylePlain target:self action:@selector(onSignOutButton)];
-
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sign Out" style:UIBarButtonItemStylePlain target:self action:@selector(onSignOutButton)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"187-pencil.png"] style:UIBarButtonItemStylePlain target:self action:@selector(composeTweet)];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)composeTweet {
+    ComposeTweetViewController *compose = [[ComposeTweetViewController alloc]initWithNibName:@"ComposeTweetViewController" bundle:nil];
+    [self presentModalViewController:compose animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning

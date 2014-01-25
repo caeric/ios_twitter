@@ -31,6 +31,9 @@
 		42CC89BF17B0F02600B6D34B /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CC89BE17B0F02600B6D34B /* TweetCell.m */; };
 		4A2D263314064B2DA5BDFE0E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC1DF52D3B94E9285F4C2F7 /* libPods.a */; };
 		EC89430D1892381F00CF882A /* TweetUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EC89430C1892381F00CF882A /* TweetUser.m */; };
+		EC8943141893753200CF882A /* ComposeTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8943121893753200CF882A /* ComposeTweetViewController.m */; };
+		EC8943151893753200CF882A /* ComposeTweetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC8943131893753200CF882A /* ComposeTweetViewController.xib */; };
+		EC8943171893765F00CF882A /* 187-pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8943161893765F00CF882A /* 187-pencil.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,10 @@
 		CCC1DF52D3B94E9285F4C2F7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC89430B1892381F00CF882A /* TweetUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetUser.h; sourceTree = "<group>"; };
 		EC89430C1892381F00CF882A /* TweetUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetUser.m; sourceTree = "<group>"; };
+		EC8943111893753200CF882A /* ComposeTweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeTweetViewController.h; sourceTree = "<group>"; };
+		EC8943121893753200CF882A /* ComposeTweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeTweetViewController.m; sourceTree = "<group>"; };
+		EC8943131893753200CF882A /* ComposeTweetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeTweetViewController.xib; sourceTree = "<group>"; };
+		EC8943161893765F00CF882A /* 187-pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "187-pencil.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +152,7 @@
 		42CC893117AF4C6A00B6D34B /* twitter */ = {
 			isa = PBXGroup;
 			children = (
+				EC89430E1893728B00CF882A /* images */,
 				42CC895E17AF86D600B6D34B /* API */,
 				42CC896217B0BD9100B6D34B /* Models */,
 				42CC89BC17B0EFEE00B6D34B /* Views */,
@@ -196,6 +204,9 @@
 				42CC89A717B0C31900B6D34B /* SignedOutVC.h */,
 				42CC89A817B0C31900B6D34B /* SignedOutVC.m */,
 				42CC89A917B0C31900B6D34B /* SignedOutVC.xib */,
+				EC8943111893753200CF882A /* ComposeTweetViewController.h */,
+				EC8943121893753200CF882A /* ComposeTweetViewController.m */,
+				EC8943131893753200CF882A /* ComposeTweetViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -249,6 +260,14 @@
 				42CC89C017B0F03E00B6D34B /* TweetCell.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		EC89430E1893728B00CF882A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				EC8943161893765F00CF882A /* 187-pencil.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +350,8 @@
 				42CC89AB17B0C31900B6D34B /* SignedOutVC.xib in Resources */,
 				42CC893617AF4C6A00B6D34B /* InfoPlist.strings in Resources */,
 				42CC893E17AF4C6B00B6D34B /* Images.xcassets in Resources */,
+				EC8943151893753200CF882A /* ComposeTweetViewController.xib in Resources */,
+				EC8943171893765F00CF882A /* 187-pencil.png in Resources */,
 				42C55E07181209DE000F9FCF /* TweetCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +411,7 @@
 				42CC89B417B0D63C00B6D34B /* RestObject.m in Sources */,
 				EC89430D1892381F00CF882A /* TweetUser.m in Sources */,
 				42CC895D17AF6FBB00B6D34B /* TimelineVC.m in Sources */,
+				EC8943141893753200CF882A /* ComposeTweetViewController.m in Sources */,
 				42CC893C17AF4C6B00B6D34B /* AppDelegate.m in Sources */,
 				42CC893817AF4C6B00B6D34B /* main.m in Sources */,
 			);
