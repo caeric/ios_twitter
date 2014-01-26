@@ -13,7 +13,6 @@
                 <outlet property="replyButton" destination="quz-mm-Mec" id="fN7-Q1-J8a"/>
                 <outlet property="retweetButton" destination="RMt-mn-VrN" id="n76-rc-tLQ"/>
                 <outlet property="retweetCountLabel" destination="VJ1-Zp-wUn" id="XK0-NF-KhC"/>
-                <outlet property="timeLabel" destination="YHe-Me-kS1" id="txN-GX-dOJ"/>
                 <outlet property="tweetLabel" destination="Mci-in-fbw" id="n0c-VR-iWr"/>
                 <outlet property="userHandleLabel" destination="Zgw-Rb-hI0" id="LKs-DO-IM7"/>
                 <outlet property="userImageView" destination="mxv-mU-pPx" id="8cY-OW-8FA"/>
@@ -58,12 +57,6 @@
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bg-0c-Z1A">
                     <rect key="frame" x="14" y="145" width="34" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHe-Me-kS1">
-                    <rect key="frame" x="88" y="145" width="34" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
@@ -150,15 +143,12 @@
                 <constraint firstAttribute="trailing" secondItem="ke2-gd-SdB" secondAttribute="trailing" id="9nf-gy-0Ed"/>
                 <constraint firstItem="sXD-O2-Efl" firstAttribute="top" secondItem="N39-kX-fkk" secondAttribute="bottom" constant="8" id="A7G-0H-gYH"/>
                 <constraint firstItem="quz-mm-Mec" firstAttribute="top" secondItem="ke2-gd-SdB" secondAttribute="bottom" constant="14" id="C47-Gv-BK6"/>
-                <constraint firstItem="NrO-bu-wzf" firstAttribute="top" secondItem="YHe-Me-kS1" secondAttribute="bottom" constant="21" id="DUX-jY-aA3"/>
-                <constraint firstItem="YHe-Me-kS1" firstAttribute="top" secondItem="Mci-in-fbw" secondAttribute="bottom" constant="16" id="DtC-zW-kN6"/>
                 <constraint firstItem="ke2-gd-SdB" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="EUz-Ck-NaQ"/>
                 <constraint firstItem="ke2-gd-SdB" firstAttribute="top" secondItem="fx2-GE-vzx" secondAttribute="bottom" constant="6" id="Iym-DB-UTp"/>
                 <constraint firstItem="VJ1-Zp-wUn" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="14" id="KF4-c6-DsE"/>
                 <constraint firstItem="fx2-GE-vzx" firstAttribute="leading" secondItem="VJ1-Zp-wUn" secondAttribute="trailing" constant="101" id="M3e-c3-Kq8"/>
                 <constraint firstItem="vMr-xU-7za" firstAttribute="top" secondItem="NrO-bu-wzf" secondAttribute="bottom" constant="8" id="NQL-Sz-tmv"/>
                 <constraint firstAttribute="trailing" secondItem="NrO-bu-wzf" secondAttribute="trailing" id="Opi-Tv-9G6"/>
-                <constraint firstItem="YHe-Me-kS1" firstAttribute="leading" secondItem="4bg-0c-Z1A" secondAttribute="trailing" constant="40" id="QIf-8t-1nA"/>
                 <constraint firstItem="mxv-mU-pPx" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" id="Sj7-gJ-34z"/>
                 <constraint firstItem="g9u-84-V0g" firstAttribute="top" secondItem="NrO-bu-wzf" secondAttribute="bottom" constant="8" id="TW4-7Y-dze"/>
                 <constraint firstItem="4bg-0c-Z1A" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="14" id="UTd-5X-nMF"/>
@@ -173,6 +163,7 @@
                 <constraint firstItem="RMt-mn-VrN" firstAttribute="top" secondItem="ke2-gd-SdB" secondAttribute="bottom" constant="14" id="vCC-fr-1Yj"/>
                 <constraint firstItem="mxv-mU-pPx" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="14" id="vnu-NO-hsH"/>
                 <constraint firstItem="VJ1-Zp-wUn" firstAttribute="top" secondItem="NrO-bu-wzf" secondAttribute="bottom" constant="8" id="x7Y-vP-Zex"/>
+                <constraint firstItem="NrO-bu-wzf" firstAttribute="top" secondItem="4bg-0c-Z1A" secondAttribute="bottom" constant="21" id="xFX-Pe-kQW"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

@@ -76,15 +76,26 @@
 {
     static NSString *CellIdentifier = @"TweetCell";
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        cell.retweetLabel.text = @"";
     Tweet *tweet = self.tweets[indexPath.row];
     cell.tweetText.text = tweet.text;
     cell.userNameLabel.text = [tweet.tweetUser objectForKey:@"name"];
     NSURL *url = [NSURL URLWithString:[tweet.tweetUser objectForKey:@"profile_image_url"]];
     [cell.userImageView setImageWithURL:url];
-// =   [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"eee MMM dd HH:mm:ss ZZZZ yyyy"];
+    NSDate *date = [df dateFromString:[tweet objectForKey: @"created_at"]];
+    [df setDateFormat:@"eee"];
+    NSString *dateStr = [df stringFromDate:date];
+    NSLog(@"%@", dateStr);
+    cell.agoLabel.text = dateStr;
+    
+    
+    
+    cell.userHandleLabel.text = cell.userHandleLabel.text = [tweet.tweetUser objectForKey:@"screen_name"];
+    
 
-//    Tweet *tweet =
-//    cell.textLabel.text = tweet.text;
     
     return cell;
 }
@@ -166,7 +177,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 150;
+    
+    Tweet *tweet = self.tweets[indexPath.row];
+    CGSize textSize = [tweet.text sizeWithFont:[UIFont systemFontOfSize:15.0f] constrainedToSize:CGSizeMake(219, 20000) lineBreakMode: NSLineBreakByWordWrapping];
+    NSLog(@"%f", textSize.height);
+    return textSize.height + 100;
 }
 
 @end

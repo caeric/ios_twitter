@@ -43,6 +43,15 @@
     NSURL *url = [NSURL URLWithString:[self.tweet.tweetUser objectForKey:@"profile_image_url"]];
     [self.userImageView setImageWithURL:url];
     self.userHandleLabel.text = [self.tweet.tweetUser objectForKey:@"screen_name"];
+    
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"eee MMM dd HH:mm:ss ZZZZ yyyy"];
+    NSDate *date = [df dateFromString:[self.tweet objectForKey: @"created_at"]];
+    [df setDateFormat:@"eee MMM dd HH:mm"];
+    NSString *dateStr = [df stringFromDate:date];
+    NSLog(@"%@", dateStr);
+    self.dateLabel.text = dateStr;
+
 
     // Do any additional setup after loading the view from its nib.
 }
