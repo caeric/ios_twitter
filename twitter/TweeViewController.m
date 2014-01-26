@@ -74,5 +74,13 @@
 }
 
 - (IBAction)onFavoriteClicked:(id)sender {
+    
+    [[TwitterClient instance] favoriteWithId:[self.tweet objectForKey:@"id"] success:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"%@", response);
+        [self.navigationController popViewControllerAnimated:YES];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+        // Do nothing
+    }];
 }
 @end
