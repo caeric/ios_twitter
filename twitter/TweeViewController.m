@@ -62,4 +62,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onRetweetClicked:(id)sender {
+    [[TwitterClient instance] retweetWithId:[self.tweet objectForKey:@"id"] success:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"%@", response);
+        [self.navigationController popViewControllerAnimated:YES];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+        // Do nothing
+    }];
+
+}
+
+- (IBAction)onFavoriteClicked:(id)sender {
+}
 @end

@@ -24,5 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *replyButton;
 @property (weak, nonatomic) IBOutlet UIButton *retweetButton;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
+- (IBAction)onRetweetClicked:(id)sender;
+- (IBAction)onFavoriteClicked:(id)sender;
 
 @end

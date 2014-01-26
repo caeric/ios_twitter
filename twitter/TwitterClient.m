@@ -79,10 +79,18 @@ static NSString * const kAccessTokenKey = @"kAccessTokenKey";
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-
 - (void)retweetCountWithId:(NSString *)id success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{@"id": id}];
     [self getPath:@"1.1/statuses/show.json" parameters:params success:success failure:failure];
+}
+
+- (void)postTweetWithText:(NSString *)tweet success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{@"status": tweet}];
+    [self postPath:@"1.1/statuses/update.json" parameters:params success:success failure:failure];
+}
+
+- (void)retweetWithId:(NSString *)id success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    [self postPath:[NSString stringWithFormat:@"1.1/statuses/retweet/%@.json", id] parameters:nil success:success failure:failure];
 }
 
 @end

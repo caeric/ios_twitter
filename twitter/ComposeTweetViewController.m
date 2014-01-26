@@ -52,6 +52,13 @@
 }
 
 - (IBAction)onTweetClicked:(id)sender {
+    [[TwitterClient instance] postTweetWithText:self.tweetTextView.text success:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"%@", response);
+    [self dismissViewControllerAnimated:YES completion:nil];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                NSLog(@"%@", error);
+        // Do nothing
+    }];
 }
 
 
@@ -77,6 +84,5 @@
         self.tweetButton.enabled = NO;
     }
 }
-
 
 @end
