@@ -14,7 +14,7 @@
 #define TWEET_MAX_LENGTH 140
 
 @interface ComposeTweetViewController ()
-@property (nonatomic, strong) TweetUser* tweetUser;
+
 @end
 
 @implementation ComposeTweetViewController
@@ -24,7 +24,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-//        self.tweetUser = user;
     }
     return self;
 }

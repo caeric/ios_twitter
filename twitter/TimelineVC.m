@@ -10,6 +10,7 @@
 #import "TweetCell.h"
 #import "AFNetworking.h"
 #import "ComposeTweetViewController.h"
+#import "TweeViewController.h"
 @interface TimelineVC ()
 
 @property (nonatomic, strong) NSMutableArray *tweets;
@@ -49,7 +50,7 @@
 
 - (void)composeTweet {
     ComposeTweetViewController *compose = [[ComposeTweetViewController alloc]initWithNibName:@"ComposeTweetViewController" bundle:nil];
-    [self presentModalViewController:compose animated:YES];
+    [self presentViewController:compose animated:YES completion:nil];
     
 }
 
@@ -131,6 +132,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    TweeViewController *controller = [[TweeViewController alloc]initWithNibName:@"TweeViewController" bundle:nil];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 /*

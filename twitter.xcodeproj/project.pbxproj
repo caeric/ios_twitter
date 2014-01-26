@@ -34,6 +34,8 @@
 		EC8943141893753200CF882A /* ComposeTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8943121893753200CF882A /* ComposeTweetViewController.m */; };
 		EC8943151893753200CF882A /* ComposeTweetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC8943131893753200CF882A /* ComposeTweetViewController.xib */; };
 		EC8943171893765F00CF882A /* 187-pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8943161893765F00CF882A /* 187-pencil.png */; };
+		ECAD6BE0189474B40059C3E4 /* TweeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAD6BDE189474B40059C3E4 /* TweeViewController.m */; };
+		ECAD6BE1189474B40059C3E4 /* TweeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAD6BDF189474B40059C3E4 /* TweeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,9 @@
 		EC8943121893753200CF882A /* ComposeTweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeTweetViewController.m; sourceTree = "<group>"; };
 		EC8943131893753200CF882A /* ComposeTweetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeTweetViewController.xib; sourceTree = "<group>"; };
 		EC8943161893765F00CF882A /* 187-pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "187-pencil.png"; sourceTree = "<group>"; };
+		ECAD6BDD189474B40059C3E4 /* TweeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweeViewController.h; sourceTree = "<group>"; };
+		ECAD6BDE189474B40059C3E4 /* TweeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweeViewController.m; sourceTree = "<group>"; };
+		ECAD6BDF189474B40059C3E4 /* TweeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +212,9 @@
 				EC8943111893753200CF882A /* ComposeTweetViewController.h */,
 				EC8943121893753200CF882A /* ComposeTweetViewController.m */,
 				EC8943131893753200CF882A /* ComposeTweetViewController.xib */,
+				ECAD6BDD189474B40059C3E4 /* TweeViewController.h */,
+				ECAD6BDE189474B40059C3E4 /* TweeViewController.m */,
+				ECAD6BDF189474B40059C3E4 /* TweeViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -350,6 +358,7 @@
 				42CC89AB17B0C31900B6D34B /* SignedOutVC.xib in Resources */,
 				42CC893617AF4C6A00B6D34B /* InfoPlist.strings in Resources */,
 				42CC893E17AF4C6B00B6D34B /* Images.xcassets in Resources */,
+				ECAD6BE1189474B40059C3E4 /* TweeViewController.xib in Resources */,
 				EC8943151893753200CF882A /* ComposeTweetViewController.xib in Resources */,
 				EC8943171893765F00CF882A /* 187-pencil.png in Resources */,
 				42C55E07181209DE000F9FCF /* TweetCell.xib in Resources */,
@@ -411,6 +420,7 @@
 				42CC89B417B0D63C00B6D34B /* RestObject.m in Sources */,
 				EC89430D1892381F00CF882A /* TweetUser.m in Sources */,
 				42CC895D17AF6FBB00B6D34B /* TimelineVC.m in Sources */,
+				ECAD6BE0189474B40059C3E4 /* TweeViewController.m in Sources */,
 				EC8943141893753200CF882A /* ComposeTweetViewController.m in Sources */,
 				42CC893C17AF4C6B00B6D34B /* AppDelegate.m in Sources */,
 				42CC893817AF4C6B00B6D34B /* main.m in Sources */,
