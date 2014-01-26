@@ -133,6 +133,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     TweeViewController *controller = [[TweeViewController alloc]initWithNibName:@"TweeViewController" bundle:nil];
+    controller.tweet = self.tweets[indexPath.row];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

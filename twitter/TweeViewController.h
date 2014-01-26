@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tweet.h"
 
 @interface TweeViewController : UIViewController
+
+@property (strong, nonatomic) Tweet *tweet;
 @property (weak, nonatomic) IBOutlet UIImageView *userImageView;
 
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
